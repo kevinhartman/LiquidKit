@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		0AFCECD818A2E19B00A84A0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECD718A2E19B00A84A0C /* Cocoa.framework */; };
 		0AFCECE218A2E19B00A84A0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCECE018A2E19B00A84A0C /* InfoPlist.strings */; };
-		0AFCECE618A2E19B00A84A0C /* LiquidKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCECE518A2E19B00A84A0C /* LiquidKit.m */; };
 		0AFCECED18A2E19B00A84A0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECEC18A2E19B00A84A0C /* XCTest.framework */; };
 		0AFCECEE18A2E19B00A84A0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECD718A2E19B00A84A0C /* Cocoa.framework */; };
 		0AFCECF118A2E19B00A84A0C /* LiquidKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECD418A2E19B00A84A0C /* LiquidKit.framework */; };
 		0AFCECF718A2E19B00A84A0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCECF518A2E19B00A84A0C /* InfoPlist.strings */; };
 		0AFCECF918A2E19B00A84A0C /* LiquidKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCECF818A2E19B00A84A0C /* LiquidKitTests.m */; };
+		0AFCED0A18A3502000A84A0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCED0918A3502000A84A0C /* Foundation.framework */; };
+		0AFCED1718A3502100A84A0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECEC18A2E19B00A84A0C /* XCTest.framework */; };
+		0AFCED1818A3502100A84A0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCED0918A3502000A84A0C /* Foundation.framework */; };
+		0AFCED1A18A3502100A84A0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCED1918A3502100A84A0C /* UIKit.framework */; };
+		0AFCED1D18A3502100A84A0C /* libLiquidKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCED0818A3502000A84A0C /* libLiquidKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +29,26 @@
 			remoteGlobalIDString = 0AFCECD318A2E19B00A84A0C;
 			remoteInfo = LiquidKit;
 		};
+		0AFCED1B18A3502100A84A0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AFCECCB18A2E19B00A84A0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AFCED0718A3502000A84A0C;
+			remoteInfo = LiquidKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0AFCED0618A3502000A84A0C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0AFCECD418A2E19B00A84A0C /* LiquidKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LiquidKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,12 +60,15 @@
 		0AFCECE118A2E19B00A84A0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0AFCECE318A2E19B00A84A0C /* LiquidKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LiquidKit-Prefix.pch"; sourceTree = "<group>"; };
 		0AFCECE418A2E19B00A84A0C /* LiquidKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiquidKit.h; sourceTree = "<group>"; };
-		0AFCECE518A2E19B00A84A0C /* LiquidKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiquidKit.m; sourceTree = "<group>"; };
-		0AFCECEB18A2E19B00A84A0C /* LiquidKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiquidKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFCECEB18A2E19B00A84A0C /* LiquidKitFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiquidKitFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFCECEC18A2E19B00A84A0C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0AFCECF418A2E19B00A84A0C /* LiquidKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiquidKitTests-Info.plist"; sourceTree = "<group>"; };
 		0AFCECF618A2E19B00A84A0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0AFCECF818A2E19B00A84A0C /* LiquidKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiquidKitTests.m; sourceTree = "<group>"; };
+		0AFCED0818A3502000A84A0C /* libLiquidKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLiquidKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFCED0918A3502000A84A0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0AFCED1618A3502000A84A0C /* LiquidKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiquidKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFCED1918A3502100A84A0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +90,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AFCED0518A3502000A84A0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFCED0A18A3502000A84A0C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFCED1318A3502000A84A0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFCED1D18A3502100A84A0C /* libLiquidKit.a in Frameworks */,
+				0AFCED1718A3502100A84A0C /* XCTest.framework in Frameworks */,
+				0AFCED1A18A3502100A84A0C /* UIKit.framework in Frameworks */,
+				0AFCED1818A3502100A84A0C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				0AFCECD418A2E19B00A84A0C /* LiquidKit.framework */,
-				0AFCECEB18A2E19B00A84A0C /* LiquidKitTests.xctest */,
+				0AFCECEB18A2E19B00A84A0C /* LiquidKitFrameworkTests.xctest */,
+				0AFCED0818A3502000A84A0C /* libLiquidKit.a */,
+				0AFCED1618A3502000A84A0C /* LiquidKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +138,8 @@
 			children = (
 				0AFCECD718A2E19B00A84A0C /* Cocoa.framework */,
 				0AFCECEC18A2E19B00A84A0C /* XCTest.framework */,
+				0AFCED0918A3502000A84A0C /* Foundation.framework */,
+				0AFCED1918A3502100A84A0C /* UIKit.framework */,
 				0AFCECD918A2E19B00A84A0C /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -110,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				0AFCECE418A2E19B00A84A0C /* LiquidKit.h */,
-				0AFCECE518A2E19B00A84A0C /* LiquidKit.m */,
 				0AFCECDE18A2E19B00A84A0C /* Supporting Files */,
 			);
 			path = LiquidKit;
@@ -190,7 +238,42 @@
 			);
 			name = LiquidKitFrameworkTests;
 			productName = LiquidKitTests;
-			productReference = 0AFCECEB18A2E19B00A84A0C /* LiquidKitTests.xctest */;
+			productReference = 0AFCECEB18A2E19B00A84A0C /* LiquidKitFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AFCED0718A3502000A84A0C /* LiquidKitLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AFCED2618A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitLibrary" */;
+			buildPhases = (
+				0AFCED0418A3502000A84A0C /* Sources */,
+				0AFCED0518A3502000A84A0C /* Frameworks */,
+				0AFCED0618A3502000A84A0C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiquidKitLibrary;
+			productName = LiquidKit;
+			productReference = 0AFCED0818A3502000A84A0C /* libLiquidKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0AFCED1518A3502000A84A0C /* LiquidKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AFCED2918A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitTests" */;
+			buildPhases = (
+				0AFCED1218A3502000A84A0C /* Sources */,
+				0AFCED1318A3502000A84A0C /* Frameworks */,
+				0AFCED1418A3502000A84A0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AFCED1C18A3502100A84A0C /* PBXTargetDependency */,
+			);
+			name = LiquidKitTests;
+			productName = LiquidKitTests;
+			productReference = 0AFCED1618A3502000A84A0C /* LiquidKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -203,6 +286,9 @@
 				ORGANIZATIONNAME = "Kevin Hartman";
 				TargetAttributes = {
 					0AFCECEA18A2E19B00A84A0C = {
+						TestTargetID = 0AFCECD318A2E19B00A84A0C;
+					};
+					0AFCED1518A3502000A84A0C = {
 						TestTargetID = 0AFCECD318A2E19B00A84A0C;
 					};
 				};
@@ -221,6 +307,8 @@
 			targets = (
 				0AFCECD318A2E19B00A84A0C /* LiquidKitFramework */,
 				0AFCECEA18A2E19B00A84A0C /* LiquidKitFrameworkTests */,
+				0AFCED0718A3502000A84A0C /* LiquidKitLibrary */,
+				0AFCED1518A3502000A84A0C /* LiquidKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +330,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AFCED1418A3502000A84A0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -249,7 +344,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFCECE618A2E19B00A84A0C /* LiquidKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +355,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AFCED0418A3502000A84A0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AFCED1218A3502000A84A0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -268,6 +376,11 @@
 			isa = PBXTargetDependency;
 			target = 0AFCECD318A2E19B00A84A0C /* LiquidKitFramework */;
 			targetProxy = 0AFCECEF18A2E19B00A84A0C /* PBXContainerItemProxy */;
+		};
+		0AFCED1C18A3502100A84A0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AFCED0718A3502000A84A0C /* LiquidKitLibrary */;
+			targetProxy = 0AFCED1B18A3502100A84A0C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -429,6 +542,92 @@
 			};
 			name = Release;
 		};
+		0AFCED2718A3502100A84A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				DSTROOT = /tmp/LiquidKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiquidKit/LiquidKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = LiquidKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0AFCED2818A3502100A84A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				DSTROOT = /tmp/LiquidKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiquidKit/LiquidKit-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = LiquidKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AFCED2A18A3502100A84A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LiquidKit.framework/Versions/A/LiquidKit";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiquidKit/LiquidKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LiquidKitTests/LiquidKitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0AFCED2B18A3502100A84A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LiquidKit.framework/Versions/A/LiquidKit";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiquidKit/LiquidKit-Prefix.pch";
+				INFOPLIST_FILE = "LiquidKitTests/LiquidKitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -454,6 +653,22 @@
 			buildConfigurations = (
 				0AFCED0018A2E19B00A84A0C /* Debug */,
 				0AFCED0118A2E19B00A84A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0AFCED2618A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFCED2718A3502100A84A0C /* Debug */,
+				0AFCED2818A3502100A84A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0AFCED2918A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFCED2A18A3502100A84A0C /* Debug */,
+				0AFCED2B18A3502100A84A0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
