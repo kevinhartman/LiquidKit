@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A29887118A57A9900CDC22F /* LiquidKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFCECE418A2E19B00A84A0C /* LiquidKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AFCECD818A2E19B00A84A0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECD718A2E19B00A84A0C /* Cocoa.framework */; };
 		0AFCECE218A2E19B00A84A0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCECE018A2E19B00A84A0C /* InfoPlist.strings */; };
 		0AFCECED18A2E19B00A84A0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECEC18A2E19B00A84A0C /* XCTest.framework */; };
@@ -22,19 +23,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0A65852018A57DDD00E71151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AFCECCB18A2E19B00A84A0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AFCECD318A2E19B00A84A0C;
+			remoteInfo = LiquidKitFramework;
+		};
 		0ACAAA4518A4BFB5006E95F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0AFCECCB18A2E19B00A84A0C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0ACAAA3D18A4BA15006E95F1;
 			remoteInfo = RunMakeTarget;
-		};
-		0AFCECEF18A2E19B00A84A0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0AFCECCB18A2E19B00A84A0C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0AFCECD318A2E19B00A84A0C;
-			remoteInfo = LiquidKit;
 		};
 		0AFCED1B18A3502100A84A0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -74,7 +75,7 @@
 		0AFCECF818A2E19B00A84A0C /* LiquidKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiquidKitTests.m; sourceTree = "<group>"; };
 		0AFCED0818A3502000A84A0C /* libLiquidKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLiquidKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFCED0918A3502000A84A0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0AFCED1618A3502000A84A0C /* LiquidKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiquidKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFCED1618A3502000A84A0C /* LiquidKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LiquidKitTests.xctest; path = LiquidKitLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFCED1918A3502100A84A0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -206,6 +207,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A29887118A57A9900CDC22F /* LiquidKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +261,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				0AFCECF018A2E19B00A84A0C /* PBXTargetDependency */,
+				0A65852118A57DDD00E71151 /* PBXTargetDependency */,
 			);
 			name = LiquidKitFrameworkTests;
 			productName = LiquidKitTests;
@@ -283,9 +285,9 @@
 			productReference = 0AFCED0818A3502000A84A0C /* libLiquidKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		0AFCED1518A3502000A84A0C /* LiquidKitTests */ = {
+		0AFCED1518A3502000A84A0C /* LiquidKitLibraryTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AFCED2918A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitTests" */;
+			buildConfigurationList = 0AFCED2918A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitLibraryTests" */;
 			buildPhases = (
 				0AFCED1218A3502000A84A0C /* Sources */,
 				0AFCED1318A3502000A84A0C /* Frameworks */,
@@ -296,7 +298,7 @@
 			dependencies = (
 				0AFCED1C18A3502100A84A0C /* PBXTargetDependency */,
 			);
-			name = LiquidKitTests;
+			name = LiquidKitLibraryTests;
 			productName = LiquidKitTests;
 			productReference = 0AFCED1618A3502000A84A0C /* LiquidKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -333,7 +335,7 @@
 				0AFCECD318A2E19B00A84A0C /* LiquidKitFramework */,
 				0AFCECEA18A2E19B00A84A0C /* LiquidKitFrameworkTests */,
 				0AFCED0718A3502000A84A0C /* LiquidKitLibrary */,
-				0AFCED1518A3502000A84A0C /* LiquidKitTests */,
+				0AFCED1518A3502000A84A0C /* LiquidKitLibraryTests */,
 				0ACAAA3D18A4BA15006E95F1 /* RunMakeTarget */,
 			);
 		};
@@ -398,15 +400,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0A65852118A57DDD00E71151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AFCECD318A2E19B00A84A0C /* LiquidKitFramework */;
+			targetProxy = 0A65852018A57DDD00E71151 /* PBXContainerItemProxy */;
+		};
 		0ACAAA4618A4BFB5006E95F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0ACAAA3D18A4BA15006E95F1 /* RunMakeTarget */;
 			targetProxy = 0ACAAA4518A4BFB5006E95F1 /* PBXContainerItemProxy */;
-		};
-		0AFCECF018A2E19B00A84A0C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0AFCECD318A2E19B00A84A0C /* LiquidKitFramework */;
-			targetProxy = 0AFCECEF18A2E19B00A84A0C /* PBXContainerItemProxy */;
 		};
 		0AFCED1C18A3502100A84A0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -734,7 +736,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AFCED2918A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitTests" */ = {
+		0AFCED2918A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitLibraryTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AFCED2A18A3502100A84A0C /* Debug */,
