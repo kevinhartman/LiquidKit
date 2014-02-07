@@ -22,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0ACAAA4518A4BFB5006E95F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AFCECCB18A2E19B00A84A0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ACAAA3D18A4BA15006E95F1;
+			remoteInfo = RunMakeTarget;
+		};
 		0AFCECEF18A2E19B00A84A0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0AFCECCB18A2E19B00A84A0C /* Project object */;
@@ -204,6 +211,23 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		0ACAAA3D18A4BA15006E95F1 /* RunMakeTarget */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "${ACTION}";
+			buildConfigurationList = 0ACAAA4018A4BA15006E95F1 /* Build configuration list for PBXLegacyTarget "RunMakeTarget" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = RunMakeTarget;
+			passBuildSettingsInEnvironment = 1;
+			productName = RunMakeTarget;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		0AFCECD318A2E19B00A84A0C /* LiquidKitFramework */ = {
 			isa = PBXNativeTarget;
@@ -217,6 +241,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0ACAAA4618A4BFB5006E95F1 /* PBXTargetDependency */,
 			);
 			name = LiquidKitFramework;
 			productName = LiquidKit;
@@ -309,6 +334,7 @@
 				0AFCECEA18A2E19B00A84A0C /* LiquidKitFrameworkTests */,
 				0AFCED0718A3502000A84A0C /* LiquidKitLibrary */,
 				0AFCED1518A3502000A84A0C /* LiquidKitTests */,
+				0ACAAA3D18A4BA15006E95F1 /* RunMakeTarget */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +398,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0ACAAA4618A4BFB5006E95F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ACAAA3D18A4BA15006E95F1 /* RunMakeTarget */;
+			targetProxy = 0ACAAA4518A4BFB5006E95F1 /* PBXContainerItemProxy */;
+		};
 		0AFCECF018A2E19B00A84A0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0AFCECD318A2E19B00A84A0C /* LiquidKitFramework */;
@@ -404,6 +435,31 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0ACAAA3E18A4BA15006E95F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0ACAAA3F18A4BA15006E95F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		0AFCECFA18A2E19B00A84A0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -482,6 +538,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LiquidKit/LiquidKit-Prefix.pch";
 				INFOPLIST_FILE = "LiquidKit/LiquidKit-Info.plist";
+				INSTALL_PATH = "/tmp/$(PROJECT_NAME).dst";
 				PRODUCT_NAME = LiquidKit;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -497,6 +554,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LiquidKit/LiquidKit-Prefix.pch";
 				INFOPLIST_FILE = "LiquidKit/LiquidKit-Info.plist";
+				INSTALL_PATH = "/tmp/$(PROJECT_NAME).dst";
 				PRODUCT_NAME = LiquidKit;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -631,6 +689,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0ACAAA4018A4BA15006E95F1 /* Build configuration list for PBXLegacyTarget "RunMakeTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ACAAA3E18A4BA15006E95F1 /* Debug */,
+				0ACAAA3F18A4BA15006E95F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0AFCECCE18A2E19B00A84A0C /* Build configuration list for PBXProject "LiquidKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -647,6 +714,7 @@
 				0AFCECFE18A2E19B00A84A0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AFCECFF18A2E19B00A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -655,6 +723,7 @@
 				0AFCED0118A2E19B00A84A0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AFCED2618A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitLibrary" */ = {
 			isa = XCConfigurationList;
@@ -663,6 +732,7 @@
 				0AFCED2818A3502100A84A0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AFCED2918A3502100A84A0C /* Build configuration list for PBXNativeTarget "LiquidKitTests" */ = {
 			isa = XCConfigurationList;
@@ -671,6 +741,7 @@
 				0AFCED2B18A3502100A84A0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
