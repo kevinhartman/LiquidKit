@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "LQImageUtils+OSXUtils.h"
 
 @interface LiquidKitTests : XCTestCase
 
@@ -28,7 +29,19 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    CGFloat radius = 6.0f;
+    
+    CGMutablePathRef circlePath = CGPathCreateMutable();
+    CGPathAddArc(circlePath, NULL, radius, radius, radius, 0, M_PI*2, NO);
+    
+    [LQImageUtils imageWithSize:CGSizeMake(radius * 2, radius * 2) fromContextDrawBlock:^(CGContextRef context){
+        
+        CGContextAddPath(context, circlePath);
+        CGContextStrokePath(context);
+
+    }];
+    
+    //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end

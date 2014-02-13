@@ -8,21 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		0A29887118A57A9900CDC22F /* LiquidKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFCECE418A2E19B00A84A0C /* LiquidKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A3349D718AB3A1B0009E728 /* MXCILiquidFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3349D418AB3A1B0009E728 /* MXCILiquidFilter.h */; };
+		0A3349D818AB3A1B0009E728 /* MXCILiquidFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349D518AB3A1B0009E728 /* MXCILiquidFilter.m */; };
+		0A3349D918AB3A1B0009E728 /* MXCILiquidFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349D518AB3A1B0009E728 /* MXCILiquidFilter.m */; };
+		0A3349DC18AB41260009E728 /* LQImageUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3349DA18AB41260009E728 /* LQImageUtils.h */; };
+		0A3349DD18AB41260009E728 /* LQImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349DB18AB41260009E728 /* LQImageUtils.m */; };
+		0A3349DE18AB41260009E728 /* LQImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349DB18AB41260009E728 /* LQImageUtils.m */; };
+		0A3349E318AB41BA0009E728 /* LQImageUtils+OSXUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3349E118AB41BA0009E728 /* LQImageUtils+OSXUtils.h */; };
+		0A3349E718AB41DF0009E728 /* LQImageUtils+iOSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349E618AB41DF0009E728 /* LQImageUtils+iOSUtils.m */; };
+		0A507CA618AC22FC00085CDB /* LQImageUtils+iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A507CA518AC22FC00085CDB /* LQImageUtils+iOSTests.m */; };
+		0A5CFA5318AC38560090AE84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEA251118AB784F00248526 /* UIKit.framework */; };
+		0A5CFA5618AC38690090AE84 /* libLiquidKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCED0818A3502000A84A0C /* libLiquidKit.a */; };
+		0A5CFA5718AC39CB0090AE84 /* LQImageUtils+iOSUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A3349E518AB41DF0009E728 /* LQImageUtils+iOSUtils.h */; };
+		0A5CFA5818AC39CB0090AE84 /* MXCILiquidFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A3349D418AB3A1B0009E728 /* MXCILiquidFilter.h */; };
+		0A5CFA5918AC39CB0090AE84 /* LQImageUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A3349DA18AB41260009E728 /* LQImageUtils.h */; };
+		0A5CFA5A18AC39CB0090AE84 /* MXLiquidParticleFactory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0ADEEFCB18A7544500A60D3B /* MXLiquidParticleFactory.h */; };
+		0A5CFA5B18AC39CB0090AE84 /* LiquidKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AFCECE418A2E19B00A84A0C /* LiquidKit.h */; };
+		0ADEEF6C18A747DB00A60D3B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADEEF6B18A747DB00A60D3B /* CoreGraphics.framework */; };
+		0ADEEF6E18A749AB00A60D3B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADEEF6D18A749AB00A60D3B /* QuartzCore.framework */; };
+		0ADEEF7018A74D7D00A60D3B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADEEF6F18A74D7D00A60D3B /* SpriteKit.framework */; };
+		0ADEEF7218A74D8800A60D3B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADEEF7118A74D8800A60D3B /* SpriteKit.framework */; };
+		0ADEEFCD18A7544500A60D3B /* MXLiquidParticleFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADEEFCB18A7544500A60D3B /* MXLiquidParticleFactory.h */; };
+		0ADEEFCE18A7544500A60D3B /* MXLiquidParticleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADEEFCC18A7544500A60D3B /* MXLiquidParticleFactory.m */; };
+		0ADEEFCF18A7544500A60D3B /* MXLiquidParticleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADEEFCC18A7544500A60D3B /* MXLiquidParticleFactory.m */; };
+		0AEA250E18AB759600248526 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECDC18A2E19B00A84A0C /* AppKit.framework */; };
+		0AEA251018AB76D000248526 /* LQImageUtils+OSXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349E218AB41BA0009E728 /* LQImageUtils+OSXUtils.m */; };
+		0AEA251218AB784F00248526 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEA251118AB784F00248526 /* UIKit.framework */; };
 		0AFCECD818A2E19B00A84A0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECD718A2E19B00A84A0C /* Cocoa.framework */; };
 		0AFCECE218A2E19B00A84A0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCECE018A2E19B00A84A0C /* InfoPlist.strings */; };
 		0AFCECED18A2E19B00A84A0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECEC18A2E19B00A84A0C /* XCTest.framework */; };
 		0AFCECEE18A2E19B00A84A0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECD718A2E19B00A84A0C /* Cocoa.framework */; };
 		0AFCECF118A2E19B00A84A0C /* LiquidKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECD418A2E19B00A84A0C /* LiquidKit.framework */; };
 		0AFCECF718A2E19B00A84A0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCECF518A2E19B00A84A0C /* InfoPlist.strings */; };
-		0AFCECF918A2E19B00A84A0C /* LiquidKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCECF818A2E19B00A84A0C /* LiquidKitTests.m */; };
+		0AFCECF918A2E19B00A84A0C /* LQImageUtils+OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCECF818A2E19B00A84A0C /* LQImageUtils+OSXTests.m */; };
 		0AFCED0A18A3502000A84A0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCED0918A3502000A84A0C /* Foundation.framework */; };
 		0AFCED1718A3502100A84A0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCECEC18A2E19B00A84A0C /* XCTest.framework */; };
 		0AFCED1818A3502100A84A0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCED0918A3502000A84A0C /* Foundation.framework */; };
-		0AFCED1A18A3502100A84A0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCED1918A3502100A84A0C /* UIKit.framework */; };
-		0AFCED1D18A3502100A84A0C /* libLiquidKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFCED0818A3502000A84A0C /* libLiquidKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0A5CFA5418AC38650090AE84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AFCECCB18A2E19B00A84A0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AFCED0718A3502000A84A0C;
+			remoteInfo = LiquidKitLibrary;
+		};
 		0A65852018A57DDD00E71151 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0AFCECCB18A2E19B00A84A0C /* Project object */;
@@ -37,13 +68,6 @@
 			remoteGlobalIDString = 0ACAAA3D18A4BA15006E95F1;
 			remoteInfo = RunMakeTarget;
 		};
-		0AFCED1B18A3502100A84A0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0AFCECCB18A2E19B00A84A0C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0AFCED0718A3502000A84A0C;
-			remoteInfo = LiquidKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,12 +77,34 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				0A5CFA5718AC39CB0090AE84 /* LQImageUtils+iOSUtils.h in CopyFiles */,
+				0A5CFA5818AC39CB0090AE84 /* MXCILiquidFilter.h in CopyFiles */,
+				0A5CFA5918AC39CB0090AE84 /* LQImageUtils.h in CopyFiles */,
+				0A5CFA5A18AC39CB0090AE84 /* MXLiquidParticleFactory.h in CopyFiles */,
+				0A5CFA5B18AC39CB0090AE84 /* LiquidKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A3349D418AB3A1B0009E728 /* MXCILiquidFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCILiquidFilter.h; sourceTree = "<group>"; };
+		0A3349D518AB3A1B0009E728 /* MXCILiquidFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCILiquidFilter.m; sourceTree = "<group>"; };
+		0A3349DA18AB41260009E728 /* LQImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQImageUtils.h; sourceTree = "<group>"; };
+		0A3349DB18AB41260009E728 /* LQImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQImageUtils.m; sourceTree = "<group>"; };
+		0A3349E118AB41BA0009E728 /* LQImageUtils+OSXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LQImageUtils+OSXUtils.h"; sourceTree = "<group>"; };
+		0A3349E218AB41BA0009E728 /* LQImageUtils+OSXUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LQImageUtils+OSXUtils.m"; sourceTree = "<group>"; };
+		0A3349E518AB41DF0009E728 /* LQImageUtils+iOSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LQImageUtils+iOSUtils.h"; sourceTree = "<group>"; };
+		0A3349E618AB41DF0009E728 /* LQImageUtils+iOSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LQImageUtils+iOSUtils.m"; sourceTree = "<group>"; };
+		0A507CA518AC22FC00085CDB /* LQImageUtils+iOSTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LQImageUtils+iOSTests.m"; sourceTree = "<group>"; };
+		0ADEEF6918A747C900A60D3B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0ADEEF6B18A747DB00A60D3B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		0ADEEF6D18A749AB00A60D3B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0ADEEF6F18A74D7D00A60D3B /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		0ADEEF7118A74D8800A60D3B /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
+		0ADEEFCB18A7544500A60D3B /* MXLiquidParticleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXLiquidParticleFactory.h; sourceTree = "<group>"; };
+		0ADEEFCC18A7544500A60D3B /* MXLiquidParticleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXLiquidParticleFactory.m; sourceTree = "<group>"; };
+		0AEA251118AB784F00248526 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		0AFCECD418A2E19B00A84A0C /* LiquidKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LiquidKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFCECD718A2E19B00A84A0C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0AFCECDA18A2E19B00A84A0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,10 +118,10 @@
 		0AFCECEC18A2E19B00A84A0C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0AFCECF418A2E19B00A84A0C /* LiquidKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiquidKitTests-Info.plist"; sourceTree = "<group>"; };
 		0AFCECF618A2E19B00A84A0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0AFCECF818A2E19B00A84A0C /* LiquidKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiquidKitTests.m; sourceTree = "<group>"; };
+		0AFCECF818A2E19B00A84A0C /* LQImageUtils+OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LQImageUtils+OSXTests.m"; sourceTree = "<group>"; };
 		0AFCED0818A3502000A84A0C /* libLiquidKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLiquidKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFCED0918A3502000A84A0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0AFCED1618A3502000A84A0C /* LiquidKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LiquidKitTests.xctest; path = LiquidKitLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFCED1618A3502000A84A0C /* LiquidKitLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiquidKitLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFCED1918A3502100A84A0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +130,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEA250E18AB759600248526 /* AppKit.framework in Frameworks */,
+				0ADEEF7018A74D7D00A60D3B /* SpriteKit.framework in Frameworks */,
+				0ADEEF6E18A749AB00A60D3B /* QuartzCore.framework in Frameworks */,
 				0AFCECD818A2E19B00A84A0C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +151,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEA251218AB784F00248526 /* UIKit.framework in Frameworks */,
+				0ADEEF7218A74D8800A60D3B /* SpriteKit.framework in Frameworks */,
+				0ADEEF6C18A747DB00A60D3B /* CoreGraphics.framework in Frameworks */,
 				0AFCED0A18A3502000A84A0C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,9 +162,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFCED1D18A3502100A84A0C /* libLiquidKit.a in Frameworks */,
+				0A5CFA5618AC38690090AE84 /* libLiquidKit.a in Frameworks */,
+				0A5CFA5318AC38560090AE84 /* UIKit.framework in Frameworks */,
 				0AFCED1718A3502100A84A0C /* XCTest.framework in Frameworks */,
-				0AFCED1A18A3502100A84A0C /* UIKit.framework in Frameworks */,
 				0AFCED1818A3502100A84A0C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +172,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A3349D218AB3A1B0009E728 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0A3349D418AB3A1B0009E728 /* MXCILiquidFilter.h */,
+				0A3349D518AB3A1B0009E728 /* MXCILiquidFilter.m */,
+				0A3349DA18AB41260009E728 /* LQImageUtils.h */,
+				0A3349DB18AB41260009E728 /* LQImageUtils.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0A3349DF18AB41370009E728 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0A3349E518AB41DF0009E728 /* LQImageUtils+iOSUtils.h */,
+				0A3349E618AB41DF0009E728 /* LQImageUtils+iOSUtils.m */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		0A3349E018AB41420009E728 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				0A3349E118AB41BA0009E728 /* LQImageUtils+OSXUtils.h */,
+				0A3349E218AB41BA0009E728 /* LQImageUtils+OSXUtils.m */,
+			);
+			path = "OS X";
+			sourceTree = "<group>";
+		};
 		0AFCECCA18A2E19B00A84A0C = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +217,7 @@
 				0AFCECD418A2E19B00A84A0C /* LiquidKit.framework */,
 				0AFCECEB18A2E19B00A84A0C /* LiquidKitFrameworkTests.xctest */,
 				0AFCED0818A3502000A84A0C /* libLiquidKit.a */,
-				0AFCED1618A3502000A84A0C /* LiquidKitTests.xctest */,
+				0AFCED1618A3502000A84A0C /* LiquidKitLibraryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +225,12 @@
 		0AFCECD618A2E19B00A84A0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0AEA251118AB784F00248526 /* UIKit.framework */,
+				0ADEEF7118A74D8800A60D3B /* SpriteKit.framework */,
+				0ADEEF6F18A74D7D00A60D3B /* SpriteKit.framework */,
+				0ADEEF6D18A749AB00A60D3B /* QuartzCore.framework */,
+				0ADEEF6B18A747DB00A60D3B /* CoreGraphics.framework */,
+				0ADEEF6918A747C900A60D3B /* CoreGraphics.framework */,
 				0AFCECD718A2E19B00A84A0C /* Cocoa.framework */,
 				0AFCECEC18A2E19B00A84A0C /* XCTest.framework */,
 				0AFCED0918A3502000A84A0C /* Foundation.framework */,
@@ -166,6 +253,11 @@
 		0AFCECDD18A2E19B00A84A0C /* LiquidKit */ = {
 			isa = PBXGroup;
 			children = (
+				0A3349E018AB41420009E728 /* OS X */,
+				0A3349DF18AB41370009E728 /* iOS */,
+				0A3349D218AB3A1B0009E728 /* Common */,
+				0ADEEFCB18A7544500A60D3B /* MXLiquidParticleFactory.h */,
+				0ADEEFCC18A7544500A60D3B /* MXLiquidParticleFactory.m */,
 				0AFCECE418A2E19B00A84A0C /* LiquidKit.h */,
 				0AFCECDE18A2E19B00A84A0C /* Supporting Files */,
 			);
@@ -185,7 +277,8 @@
 		0AFCECF218A2E19B00A84A0C /* LiquidKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				0AFCECF818A2E19B00A84A0C /* LiquidKitTests.m */,
+				0AFCECF818A2E19B00A84A0C /* LQImageUtils+OSXTests.m */,
+				0A507CA518AC22FC00085CDB /* LQImageUtils+iOSTests.m */,
 				0AFCECF318A2E19B00A84A0C /* Supporting Files */,
 			);
 			path = LiquidKitTests;
@@ -208,6 +301,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A29887118A57A9900CDC22F /* LiquidKit.h in Headers */,
+				0A3349DC18AB41260009E728 /* LQImageUtils.h in Headers */,
+				0ADEEFCD18A7544500A60D3B /* MXLiquidParticleFactory.h in Headers */,
+				0A3349E318AB41BA0009E728 /* LQImageUtils+OSXUtils.h in Headers */,
+				0A3349D718AB3A1B0009E728 /* MXCILiquidFilter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,11 +393,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				0AFCED1C18A3502100A84A0C /* PBXTargetDependency */,
+				0A5CFA5518AC38650090AE84 /* PBXTargetDependency */,
 			);
 			name = LiquidKitLibraryTests;
 			productName = LiquidKitTests;
-			productReference = 0AFCED1618A3502000A84A0C /* LiquidKitTests.xctest */;
+			productReference = 0AFCED1618A3502000A84A0C /* LiquidKitLibraryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -372,6 +469,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3349D818AB3A1B0009E728 /* MXCILiquidFilter.m in Sources */,
+				0AEA251018AB76D000248526 /* LQImageUtils+OSXUtils.m in Sources */,
+				0ADEEFCE18A7544500A60D3B /* MXLiquidParticleFactory.m in Sources */,
+				0A3349DD18AB41260009E728 /* LQImageUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFCECF918A2E19B00A84A0C /* LiquidKitTests.m in Sources */,
+				0AFCECF918A2E19B00A84A0C /* LQImageUtils+OSXTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +488,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3349D918AB3A1B0009E728 /* MXCILiquidFilter.m in Sources */,
+				0ADEEFCF18A7544500A60D3B /* MXLiquidParticleFactory.m in Sources */,
+				0A3349E718AB41DF0009E728 /* LQImageUtils+iOSUtils.m in Sources */,
+				0A3349DE18AB41260009E728 /* LQImageUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,12 +499,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A507CA618AC22FC00085CDB /* LQImageUtils+iOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0A5CFA5518AC38650090AE84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AFCED0718A3502000A84A0C /* LiquidKitLibrary */;
+			targetProxy = 0A5CFA5418AC38650090AE84 /* PBXContainerItemProxy */;
+		};
 		0A65852118A57DDD00E71151 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0AFCECD318A2E19B00A84A0C /* LiquidKitFramework */;
@@ -409,11 +520,6 @@
 			isa = PBXTargetDependency;
 			target = 0ACAAA3D18A4BA15006E95F1 /* RunMakeTarget */;
 			targetProxy = 0ACAAA4518A4BFB5006E95F1 /* PBXContainerItemProxy */;
-		};
-		0AFCED1C18A3502100A84A0C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0AFCED0718A3502000A84A0C /* LiquidKitLibrary */;
-			targetProxy = 0AFCED1B18A3502100A84A0C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -615,7 +721,10 @@
 					"$(inherited)",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = LiquidKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -631,7 +740,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LiquidKit/LiquidKit-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = LiquidKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -643,7 +755,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LiquidKit.framework/Versions/A/LiquidKit";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libLiquidKit.a";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -658,6 +770,12 @@
 				);
 				INFOPLIST_FILE = "LiquidKitTests/LiquidKitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -669,7 +787,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LiquidKit.framework/Versions/A/LiquidKit";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libLiquidKit.a";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -680,6 +798,12 @@
 				GCC_PREFIX_HEADER = "LiquidKit/LiquidKit-Prefix.pch";
 				INFOPLIST_FILE = "LiquidKitTests/LiquidKitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
