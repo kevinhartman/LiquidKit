@@ -31,17 +31,20 @@
 {
     CGFloat radius = 6.0f;
     
-    CGMutablePathRef circlePath = CGPathCreateMutable();
-    CGPathAddArc(circlePath, NULL, radius, radius, radius, 0, M_PI*2, NO);
-    
     [LQImageUtils imageWithSize:CGSizeMake(radius * 2, radius * 2) fromContextDrawBlock:^(CGContextRef context){
         
+        CGFloat CIRCLE_COLOR[] = {1.0f, 1.0f, 1.0f, 1.0f};
+        
+        CGMutablePathRef circlePath = CGPathCreateMutable();
+        CGPathAddArc(circlePath, NULL, radius, radius, radius, 0, M_PI*2, NO);
+        
+        CGContextSetFillColor(context, CIRCLE_COLOR);
         CGContextAddPath(context, circlePath);
-        CGContextStrokePath(context);
+        CGContextFillPath(context);
+        CGPathRelease(circlePath);
 
     }];
     
-    //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end

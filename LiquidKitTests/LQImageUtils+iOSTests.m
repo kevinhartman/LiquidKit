@@ -31,18 +31,19 @@
 
 - (void)testExample
 {
-    CGMutablePathRef circlePath = CGPathCreateMutable();
-    CGPathAddArc(circlePath, NULL, 0, 0, 6, 0, M_PI*2, NO);
-    //CGPathRelease(circlePath);
+    CGFloat radius = 6.0f;
     
-    [LQImageUtils testClassMethod];
-    
-    [LQImageUtils testCategoryMethod];
-    
-    [LQImageUtils imageWithSize:CGSizeMake(12, 12) fromContextDrawBlock:^(CGContextRef context){
+    [LQImageUtils imageWithSize:CGSizeMake(radius * 2, radius * 2) fromContextDrawBlock:^(CGContextRef context){
         
+        CGFloat CIRCLE_COLOR[] = {1.0f, 1.0f, 1.0f, 1.0f};
+        
+        CGMutablePathRef circlePath = CGPathCreateMutable();
+        CGPathAddArc(circlePath, NULL, radius, radius, radius, 0, M_PI*2, NO);
+        
+        CGContextSetFillColor(context, CIRCLE_COLOR);
         CGContextAddPath(context, circlePath);
-        CGContextStrokePath(context);
+        CGContextFillPath(context);
+        CGPathRelease(circlePath);
         
     }];
 }

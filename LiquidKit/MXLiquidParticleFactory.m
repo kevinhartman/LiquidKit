@@ -10,21 +10,35 @@
 
 #if TARGET_OS_IPHONE
 #import "LQImageUtils+iOSUtils.h"
+typedef UIImage XXImage;
 #else
 #import "LQImageUtils+OSXUtils.h"
+typedef NSImage XXImage;
 #endif
 
 @implementation MXLiquidParticleFactory
 
+/* Constants */
+const CGFloat CIRCLE_COLOR[] = {1.0f, 1.0f, 1.0f, 1.0f};
+
 - (id) initWithRadius:(CGFloat)radius {
     
     if (self = [super init]) {
-
         
-        CGMutablePathRef circlePath = CGPathCreateMutable();
-        CGPathAddArc(circlePath, NULL, radius, radius, radius, 0, M_PI*2, NO);
+        XXImage *image = [LQImageUtils imageWithSize:CGSizeMake(radius * 2, radius * 2) fromContextDrawBlock:^(CGContextRef context){
+            
+            CGMutablePathRef circlePath = CGPathCreateMutable();
+            CGPathAddArc(circlePath, NULL, radius, radius, radius, 0, M_PI*2, NO);
+            
+            CGContextSetFillColor(context, CIRCLE_COLOR);
+            CGContextAddPath(context, circlePath);
+            CGContextFillPath(context);
+            CGPathRelease(circlePath);
+            
+        }];
         
-        //[LQImageUtils imageFromPath:circlePath withExtent:CGRectMake(0, 0, radius * 2, radius * 2)];
+        self.circleRadius = radius;
+        self.circleTexture = [SKTexture textureWithImage:image];
         
     }
     return self;

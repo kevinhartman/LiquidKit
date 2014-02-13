@@ -10,9 +10,14 @@
 
 @interface MXLiquidParticleFactory : NSObject
 
+/* Constants */
+extern const CGFloat CIRCLE_COLOR[];
+
+/* Properties */
 @property CGFloat circleRadius;
 @property SKTexture *circleTexture;
 
+/* Instance methods */
 - (id) initWithRadius:(CGFloat)radius;
 
 - (SKNode*) createLiquidParticle;

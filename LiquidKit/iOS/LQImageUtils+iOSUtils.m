@@ -15,17 +15,9 @@
     
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     
-//    UIBezierPath *path = [UIBezierPath bezierPathWithCGPath:circlePath];
-//    
-//    [[UIColor whiteColor] setStroke];
-//    [[UIColor whiteColor] setFill];
-//    [path stroke];
-//    [path fill];
+    CGContextRef context = UIGraphicsGetCurrentContext();
     
-    
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    
-    drawBlock(ctx);
+    drawBlock(context);
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     

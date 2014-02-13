@@ -12,7 +12,7 @@
 
 + (NSImage *) imageWithSize:(CGSize)size fromContextDrawBlock:(void (^) (CGContextRef))drawBlock {
     
-    NSImage *im = [[NSImage alloc] initWithSize:size];
+    NSImage *image = [[NSImage alloc] initWithSize:size];
     NSBitmapImageRep *rep = [[NSBitmapImageRep alloc]
                              initWithBitmapDataPlanes:NULL
                              pixelsWide:size.width
@@ -25,17 +25,17 @@
                              bytesPerRow:0
                              bitsPerPixel:0];
     
-    [im addRepresentation:rep];
+    [image addRepresentation:rep];
     
-    [im lockFocus];
+    [image lockFocus];
     
-    CGContextRef ctx = [[NSGraphicsContext currentContext] graphicsPort];
+    CGContextRef context = [[NSGraphicsContext currentContext] graphicsPort];
     
-    drawBlock(ctx);
+    drawBlock(context);
     
-    [im unlockFocus];
+    [image unlockFocus];
     
-    return im;
+    return image;
 
 }
 
