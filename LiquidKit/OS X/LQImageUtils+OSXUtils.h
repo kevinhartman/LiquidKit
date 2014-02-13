@@ -7,7 +7,6 @@
 //
 
 #import "LQImageUtils.h"
-#import <AppKit/AppKit.h>
 
 @interface LQImageUtils (OSXUtils)
 

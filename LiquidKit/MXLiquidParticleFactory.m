@@ -8,13 +8,7 @@
 
 #import "MXLiquidParticleFactory.h"
 
-#if TARGET_OS_IPHONE
-#import "LQImageUtils+iOSUtils.h"
-typedef UIImage XXImage;
-#else
-#import "LQImageUtils+OSXUtils.h"
-typedef NSImage XXImage;
-#endif
+#import "LQImageUtils.h"
 
 @implementation MXLiquidParticleFactory
 

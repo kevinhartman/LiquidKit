@@ -8,7 +8,6 @@
 
 #import "LQImageUtils+iOSUtils.h"
 
-
 @implementation LQImageUtils (iOSUtils)
 
 + (UIImage *) imageWithSize:(CGSize)size fromContextDrawBlock:(void (^) (CGContextRef))drawBlock {
