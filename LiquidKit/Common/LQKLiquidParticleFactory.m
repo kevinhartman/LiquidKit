@@ -3,23 +3,29 @@
 //  LiquidKit
 //
 //  Created by Kevin Hartman on 2/1/14.
-//  Copyright (c) 2014 Hackathon. All rights reserved.
+//  Copyright (c) 2014 Kevin Hartman (kevin@hart.mn), Joshua Pueschel (joshuapueschel@gmail.com),
+//  Andrew Landman (anl8094@rit.edu).
+//
+//  Licensed under the MIT license.
 //
 
-#import "MXLiquidParticleFactory.h"
+#import "LQKLiquidParticleFactory.h"
 
-#import "LQImageUtils.h"
+#import "LQKImageUtils.h"
 
-@implementation MXLiquidParticleFactory
+@implementation LQKLiquidParticleFactory
 
 /* Constants */
-const CGFloat CIRCLE_COLOR[] = {1.0f, 1.0f, 1.0f, 1.0f};
+
+/* The current CI liquid filter algorithm uses a white circle and colors */
+/* the parent liquid by mapping white to the liquid's desired color.     */
+const CGFloat CIRCLE_COLOR[] = { 1.0f, 1.0f, 1.0f, 1.0f };
 
 - (id) initWithRadius:(CGFloat)radius {
     
     if (self = [super init]) {
         
-        XXImage *image = [LQImageUtils imageWithSize:CGSizeMake(radius * 2, radius * 2) fromContextDrawBlock:^(CGContextRef context){
+        XXImage *image = [LQKImageUtils imageWithSize:CGSizeMake(radius * 2, radius * 2) fromContextDrawBlock:^(CGContextRef context){
             
             CGMutablePathRef circlePath = CGPathCreateMutable();
             CGPathAddArc(circlePath, NULL, radius, radius, radius, 0, M_PI*2, NO);
@@ -44,15 +50,15 @@ const CGFloat CIRCLE_COLOR[] = {1.0f, 1.0f, 1.0f, 1.0f};
     
     /* Attach sprite */
     circleNode.texture = self.circleTexture;
-    circleNode.size = CGSizeMake(self.circleRadius*2, self.circleRadius*2);
+    circleNode.size = CGSizeMake(self.circleRadius * 2, self.circleRadius * 2);
     circleNode.anchorPoint = CGPointMake(0.5,0.5);
     
     /* Attach physics body */
-    circleNode.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.circleRadius]; // 1
-    circleNode.physicsBody.dynamic = YES; // 2
-    circleNode.physicsBody.categoryBitMask = 3; // 3
-    circleNode.physicsBody.contactTestBitMask = 4; // 4
-    circleNode.physicsBody.collisionBitMask = 5; // 5
+    circleNode.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.circleRadius];
+    circleNode.physicsBody.dynamic = YES;
+    circleNode.physicsBody.categoryBitMask = 3;
+    circleNode.physicsBody.contactTestBitMask = 4;
+    circleNode.physicsBody.collisionBitMask = -1;
     circleNode.physicsBody.usesPreciseCollisionDetection = NO;
     circleNode.physicsBody.mass = 10;
     circleNode.physicsBody.friction = 0;

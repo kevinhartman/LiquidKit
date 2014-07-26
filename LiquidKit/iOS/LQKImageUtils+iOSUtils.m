@@ -3,12 +3,15 @@
 //  LiquidKit
 //
 //  Created by Kevin Hartman on 2/12/14.
-//  Copyright (c) 2014 Kevin Hartman. All rights reserved.
+//  Copyright (c) 2014 Kevin Hartman (kevin@hart.mn), Joshua Pueschel (joshuapueschel@gmail.com),
+//  Andrew Landman (anl8094@rit.edu).
+//
+//  Licensed under the MIT license.
 //
 
-#import "LQImageUtils+iOSUtils.h"
+#import "LQKImageUtils+iOSUtils.h"
 
-@implementation LQImageUtils (iOSUtils)
+@implementation LQKImageUtils (iOSUtils)
 
 + (UIImage *) imageWithSize:(CGSize)size fromContextDrawBlock:(void (^) (CGContextRef))drawBlock {
     
