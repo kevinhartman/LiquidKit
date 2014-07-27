@@ -28,7 +28,7 @@ Usage
 The following code sample shows the process of creating a liquid using LiquidKit. In this example, <i>liquidNode</i> can be added to a SpriteKit scene to display the liquid.
 
 
-`````smalltalk
+`````objective-j
 #import <LiquidKit/LiquidKit.h>
 ...
 
