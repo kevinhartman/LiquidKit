@@ -28,11 +28,11 @@ Usage
 The following code sample shows the process of creating a liquid using LiquidKit. In this example, <i>liquidNode</i> can be added to a SpriteKit scene to display the liquid.
 
 
-`````objective-c
+`````smalltalk
 #import <LiquidKit/LiquidKit.h>
 ...
 
-  /* Create a liquid with desired visual tuning *.
+  /* Create a liquid with desired visual tuning */
   SKNode *liquidNode = [[LQKLiquidNode alloc ] initWithColor:[NSColor magentaColor] withThreshold:100 withGradientWidth:256 withBlurRadius:30];
   
   /* Create a particle factory that can produce optimized particles of a given size */
