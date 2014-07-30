@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0A11EA19863BF70012235E /* LQKLiquidEffect.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0A11E819863BF70012235E /* LQKLiquidEffect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A0A11EF19863C300012235E /* LQKSolidColorEffect.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0A11ED19863C300012235E /* LQKSolidColorEffect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A0A11F019863C300012235E /* LQKSolidColorEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A11EE19863C300012235E /* LQKSolidColorEffect.m */; };
+		0A0A11F119863C300012235E /* LQKSolidColorEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A11EE19863C300012235E /* LQKSolidColorEffect.m */; };
+		0A0A11F51987F9950012235E /* LQKImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A11F41987F9950012235E /* LQKImageUtils.m */; };
+		0A0A11F61987F9950012235E /* LQKImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A11F41987F9950012235E /* LQKImageUtils.m */; };
 		0A29887118A57A9900CDC22F /* LiquidKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFCECE418A2E19B00A84A0C /* LiquidKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A3349D718AB3A1B0009E728 /* LQKCILiquidFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3349D418AB3A1B0009E728 /* LQKCILiquidFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A3349D818AB3A1B0009E728 /* LQKCILiquidFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349D518AB3A1B0009E728 /* LQKCILiquidFilter.m */; };
 		0A3349D918AB3A1B0009E728 /* LQKCILiquidFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349D518AB3A1B0009E728 /* LQKCILiquidFilter.m */; };
 		0A3349DC18AB41260009E728 /* LQKImageUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3349DA18AB41260009E728 /* LQKImageUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A3349DD18AB41260009E728 /* LQKImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349DB18AB41260009E728 /* LQKImageUtils.m */; };
-		0A3349DE18AB41260009E728 /* LQKImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349DB18AB41260009E728 /* LQKImageUtils.m */; };
 		0A3349E318AB41BA0009E728 /* LQKImageUtils+OSXUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3349E118AB41BA0009E728 /* LQKImageUtils+OSXUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A3349E718AB41DF0009E728 /* LQKImageUtils+iOSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3349E618AB41DF0009E728 /* LQKImageUtils+iOSUtils.m */; };
 		0A5CFA5318AC38560090AE84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEA251118AB784F00248526 /* UIKit.framework */; };
@@ -84,10 +88,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A0A11E819863BF70012235E /* LQKLiquidEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQKLiquidEffect.h; sourceTree = "<group>"; };
+		0A0A11ED19863C300012235E /* LQKSolidColorEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQKSolidColorEffect.h; sourceTree = "<group>"; };
+		0A0A11EE19863C300012235E /* LQKSolidColorEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQKSolidColorEffect.m; sourceTree = "<group>"; };
+		0A0A11F41987F9950012235E /* LQKImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQKImageUtils.m; sourceTree = "<group>"; };
 		0A3349D418AB3A1B0009E728 /* LQKCILiquidFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQKCILiquidFilter.h; sourceTree = "<group>"; };
 		0A3349D518AB3A1B0009E728 /* LQKCILiquidFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQKCILiquidFilter.m; sourceTree = "<group>"; };
 		0A3349DA18AB41260009E728 /* LQKImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQKImageUtils.h; sourceTree = "<group>"; };
-		0A3349DB18AB41260009E728 /* LQKImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQKImageUtils.m; sourceTree = "<group>"; };
 		0A3349E118AB41BA0009E728 /* LQKImageUtils+OSXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LQKImageUtils+OSXUtils.h"; sourceTree = "<group>"; };
 		0A3349E218AB41BA0009E728 /* LQKImageUtils+OSXUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LQKImageUtils+OSXUtils.m"; sourceTree = "<group>"; };
 		0A3349E518AB41DF0009E728 /* LQKImageUtils+iOSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LQKImageUtils+iOSUtils.h"; sourceTree = "<group>"; };
@@ -178,7 +185,10 @@
 				0A3349D418AB3A1B0009E728 /* LQKCILiquidFilter.h */,
 				0A3349D518AB3A1B0009E728 /* LQKCILiquidFilter.m */,
 				0A3349DA18AB41260009E728 /* LQKImageUtils.h */,
-				0A3349DB18AB41260009E728 /* LQKImageUtils.m */,
+				0A0A11F41987F9950012235E /* LQKImageUtils.m */,
+				0A0A11E819863BF70012235E /* LQKLiquidEffect.h */,
+				0A0A11ED19863C300012235E /* LQKSolidColorEffect.h */,
+				0A0A11EE19863C300012235E /* LQKSolidColorEffect.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -298,7 +308,9 @@
 			files = (
 				0AB9216018B09DA300BD9348 /* LQKLiquidParticleFactory.h in Headers */,
 				0A29887118A57A9900CDC22F /* LiquidKit.h in Headers */,
+				0A0A11EF19863C300012235E /* LQKSolidColorEffect.h in Headers */,
 				0AB9215918B0983E00BD9348 /* LQKLiquidNode.h in Headers */,
+				0A0A11EA19863BF70012235E /* LQKLiquidEffect.h in Headers */,
 				0A3349DC18AB41260009E728 /* LQKImageUtils.h in Headers */,
 				0A3349D718AB3A1B0009E728 /* LQKCILiquidFilter.h in Headers */,
 				0A3349E318AB41BA0009E728 /* LQKImageUtils+OSXUtils.h in Headers */,
@@ -447,11 +459,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0A11F51987F9950012235E /* LQKImageUtils.m in Sources */,
 				0A3349D818AB3A1B0009E728 /* LQKCILiquidFilter.m in Sources */,
 				0AB9216118B09DA300BD9348 /* LQKLiquidParticleFactory.m in Sources */,
 				0AB9215A18B0983E00BD9348 /* LQKLiquidNode.m in Sources */,
 				0AEA251018AB76D000248526 /* LQKImageUtils+OSXUtils.m in Sources */,
-				0A3349DD18AB41260009E728 /* LQKImageUtils.m in Sources */,
+				0A0A11F019863C300012235E /* LQKSolidColorEffect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,11 +479,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0A11F61987F9950012235E /* LQKImageUtils.m in Sources */,
 				0A3349D918AB3A1B0009E728 /* LQKCILiquidFilter.m in Sources */,
 				0AB9216218B09DA300BD9348 /* LQKLiquidParticleFactory.m in Sources */,
 				0AB9215B18B0983E00BD9348 /* LQKLiquidNode.m in Sources */,
 				0A3349E718AB41DF0009E728 /* LQKImageUtils+iOSUtils.m in Sources */,
-				0A3349DE18AB41260009E728 /* LQKImageUtils.m in Sources */,
+				0A0A11F119863C300012235E /* LQKSolidColorEffect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

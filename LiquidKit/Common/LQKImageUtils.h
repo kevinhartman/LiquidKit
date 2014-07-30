@@ -1,5 +1,5 @@
 //
-//  LQImageUtils.h
+//  LQKImageUtils.h
 //  LiquidKit
 //
 //  Created by Kevin Hartman on 2/12/14.
@@ -15,9 +15,8 @@
 #import <QuartzCore/CoreImage.h>
 #endif
 
+/* define common util functions here */
 @interface LQKImageUtils : NSObject
-
-+ (CIImage *) thresholdGradientWithIndex:(CGFloat)index withWidth:(CGFloat)width;
 
 @end
 

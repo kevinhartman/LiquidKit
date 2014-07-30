@@ -18,10 +18,18 @@
 @synthesize inputImage;
 
 
-- (id) initWithBlurRadius:(CGFloat)blurRadius withGradientImage:(CIImage*)inputGradientImage {
+- (id) initWithBlurRadius:(CGFloat)blurRadius withLiquidEffect:(NSObject<LQKLiquidEffect>*)liquidEffect {
     if (self = [super init]) {
         
+        CIImage *inputGradientImage = nil;
+        
+        if (!(inputGradientImage = [liquidEffect thresholdGradient])) {
+            return nil;
+        }
+        
         self.blurRadius = blurRadius;
+        self.liquidEffect = liquidEffect;
+        
         self.threshFilter = [CIFilter filterWithName:@"CIColorMap" keysAndValues:@"inputGradientImage", inputGradientImage, nil];
         
         /* Create background filter */
@@ -75,7 +83,7 @@
     
     CIImage *liquidImage = [self.threshFilter valueForKey: kCIOutputImageKey];
     
-    return liquidImage;
+    return [self.liquidEffect postProcessedFrameFrom:liquidImage];
 }
 
 @end

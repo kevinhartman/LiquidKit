@@ -15,6 +15,8 @@
 #import <QuartzCore/CoreImage.h>
 #endif
 
+#import "LQKLiquidEffect.h"
+
 @interface LQKCILiquidFilter: CIFilter {
     CIImage *inputImage;
 }
@@ -27,8 +29,9 @@
 @property CIImage *backgroundColor;
 
 @property CGFloat blurRadius;
+@property NSObject<LQKLiquidEffect> *liquidEffect;
 
-- (id) initWithBlurRadius:(CGFloat)blurRadius withGradientImage:(CIImage*)inputGradientImage;
+- (id) initWithBlurRadius:(CGFloat)blurRadius withLiquidEffect:(NSObject<LQKLiquidEffect>*)liquidEffect;
 
 @end
 

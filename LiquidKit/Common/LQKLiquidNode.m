@@ -14,27 +14,18 @@
 
 @implementation LQKLiquidNode
 
-- (id) initWithColor:(XXColor*)color
-       withThreshold:(NSInteger)index
-       withGradientWidth:(NSInteger)width
-       withBlurRadius:(NSInteger)radius {
+- (id) initWithBlurRadius:(NSInteger)radius withLiquidFilter:(CIFilter *)filter {
     
     if (self = [super init]) {
         
-        CIImage *inputGradientImage = [LQKImageUtils thresholdGradientWithIndex:index withWidth:width];
         
-        /* Adjust a transparent and white gradient to be transparent and <color> */
-        CIFilter *gradientColorAdjust = [CIFilter filterWithName:@"CIWhitePointAdjust"];
-        [gradientColorAdjust setValue:inputGradientImage forKey:kCIInputImageKey];
-        [gradientColorAdjust setValue:[CIColor colorWithCGColor:color.CGColor] forKey:@"inputColor"];
+        // TODO: This class will contain the logic associated with grouping child nodes
+        // together and rasterizing those groups individually for opimization
         
-        CIImage *coloredGradientImage = [gradientColorAdjust valueForKey: kCIOutputImageKey];
+        
         
         /* effect node properties */
-        self.filter = [[LQKCILiquidFilter alloc]
-                       initWithBlurRadius:radius
-                       withGradientImage:coloredGradientImage];
-        
+        self.filter = filter;
         self.shouldRasterize = NO;
         self.shouldEnableEffects = YES;
         self.physicsBody.usesPreciseCollisionDetection= NO;

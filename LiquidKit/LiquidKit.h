@@ -12,6 +12,8 @@
 #import "LQKCILiquidFilter.h"
 #import "LQKLiquidNode.h"
 #import "LQKLiquidParticleFactory.h"
+#import "LQKLiquidEffect.h"
+#import "LQKSolidColorEffect.h"
 
 @interface LiquidKit : NSObject
 

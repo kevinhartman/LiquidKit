@@ -15,9 +15,6 @@
 @interface LQKLiquidNode : SKEffectNode
 
 
-- (id) initWithColor:(XXColor*)color
-       withThreshold:(NSInteger)index
-       withGradientWidth:(NSInteger)width
-       withBlurRadius:(NSInteger)radius;
+- (id) initWithBlurRadius:(NSInteger)radius withLiquidFilter:(CIFilter *)filter;
 
 @end
