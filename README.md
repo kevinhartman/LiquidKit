@@ -14,7 +14,6 @@ The library is also an option on OS X for people who are using SpriteKit and do 
 Status
 ======
 * Capable of creating 2D liquids for use in SpriteKit.
-* Liquids can only be a solid color. You should be able to apply a texture of some sort by writing a custom threshold gradient generator, and/or by compositing the output of the liquid filter with some sort of texture. The library does not support doing these things for you currently and you'd need to recompile it with those changes. I'll probably make the library more robust and allow it to accept user overrides in both of these places at some point.
 * Currently, the liquid effect is applied to the entire area encompassed by the LiquidNode (including empty space). In SpriteKit, an EffectNode's effect is applied to the smallest rectangle that can be drawn to encompass all of it's children. This means that if you have a single liquid particle in each corner of the screen, the filter algorithm will run for the entire screen, even though there isn't much liquid to affect. This can be optimized by only running the filter on clumps of nodes that are close enough for their blurs to interact (including single nodes). I might get around to this.
 
 Known Issues
@@ -32,8 +31,14 @@ The following code sample shows the process of creating a liquid using LiquidKit
 #import <LiquidKit/LiquidKit.h>
 ...
 
-  /* Create a liquid with desired visual tuning */
-  SKNode *liquidNode = [[LQKLiquidNode alloc ] initWithColor:[NSColor magentaColor] withThreshold:100 withGradientWidth:256 withBlurRadius:30];
+  /* Create a texturing strategy for the liquid -- built-in, or on your own */
+  LQKSolidColorEffect *solidEffect = [[LQKSolidColorEffect alloc] initWithColor:[NSColor magentaColor] withIndex:100 withWidth:256];
+  
+  /* Create a liquid filter with the liquid texturing effect */
+  LQKCILiquidFilter *filter = [[LQKCILiquidFilter alloc] initWithBlurRadius:30 withLiquidEffect:solidEffect];
+  
+  /* Create a liquid node with the liquid filter */
+  SKNode *liquidNode = [[LQKLiquidNode alloc] initWithBlurRadius:30 withLiquidFilter:filter];
   
   /* Create a particle factory that can produce optimized particles of a given size */
   LQKLiquidParticleFactory *liquidParticleFactory = [[LQKLiquidParticleFactory alloc] initWithRadius:15];
