@@ -3,7 +3,9 @@
 //  LiquidKit
 //
 //  Created by Kevin Hartman on 8/1/14.
-//  Copyright (c) 2014 Kevin Hartman. All rights reserved.
+//  Copyright (c) 2014 Kevin Hartman (kevin@hart.mn).
+//
+//  Licensed under the MIT license.
 //
 
 #import "LinkedList.h"
