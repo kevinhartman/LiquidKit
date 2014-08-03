@@ -11,10 +11,14 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "LQKImageUtils.h"
+#import "LQKCILiquidFilter.h"
 
 @interface LQKLiquidNode : SKEffectNode
 
+@property NSInteger radius;
 
-- (id) initWithBlurRadius:(NSInteger)radius withLiquidFilter:(CIFilter *)filter;
+- (id) initWithBlurRadius:(NSInteger)radius withLiquidFilter:(LQKCILiquidFilter *)filter;
+
+- (void) update;
 
 @end

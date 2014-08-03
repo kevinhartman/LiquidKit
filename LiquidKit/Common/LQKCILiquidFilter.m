@@ -29,6 +29,8 @@
         
         self.blurRadius = blurRadius;
         self.liquidEffect = liquidEffect;
+        self.rasterizeList = NULL;
+        self.rasterizeCount = 0;
         
         self.threshFilter = [CIFilter filterWithName:@"CIColorMap" keysAndValues:@"inputGradientImage", inputGradientImage, nil];
         
@@ -50,6 +52,22 @@
     }
     
     return self;
+}
+
+- (CGRect*) prepareRectBufferWithSlots:(NSUInteger)slots {
+    
+    if (self.rasterizeCount < slots) {
+        
+        if (self.rasterizeCount > 0) {
+            free(self.rasterizeList);
+        }
+        
+        self.rasterizeList = malloc(slots * sizeof(CGRect));
+    }
+    
+    self.rasterizeCount = slots;
+    
+    return self.rasterizeList;
 }
 
 - (CIImage *) outputImage {

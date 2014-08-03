@@ -61,9 +61,18 @@
     return nil;
 }
 
--(void)dealloc {
-    free(_list);
+- (id) removeHead {
+    return [self remove:^BOOL(id obj, NSUInteger idx) {
+        return true;
+    }];
 }
 
+- (BOOL) isEmpty {
+    return !_head;
+}
+
+- (void) dealloc {
+    free(_list);
+}
 
 @end

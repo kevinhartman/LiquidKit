@@ -30,8 +30,12 @@
 
 @property CGFloat blurRadius;
 @property NSObject<LQKLiquidEffect> *liquidEffect;
+@property CGRect *rasterizeList;
+@property NSUInteger rasterizeCount;
 
 - (id) initWithBlurRadius:(CGFloat)blurRadius withLiquidEffect:(NSObject<LQKLiquidEffect>*)liquidEffect;
+
+- (CGRect*) prepareRectBufferWithSlots:(NSUInteger)slots;
 
 @end
 

@@ -26,4 +26,8 @@ typedef struct Element Element;
 
 - (id) remove:(BOOL (^) (id obj, NSUInteger idx))condition;
 
+- (id) removeHead;
+
+- (BOOL) isEmpty;
+
 @end
