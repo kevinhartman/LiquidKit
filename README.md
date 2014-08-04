@@ -7,9 +7,9 @@ A small library for creating liquid for use with SpriteKit on iOS and OS X.
 
 Purpose
 =======
-This library is a good option for people who are using SpriteKit on iOS and want to have a small amount of liquid simulation going on in their scene. It's not a fast implementation, because it's implemented using a combination of several CoreImage filters (but there is still some room for optimization :) ). On iOS, it's not currently possible to implement your own custom CIFilter (which would be much more efficient than this implementation), but SpriteKit effects must be CIFilters.
+This library is a good option for people who are using SpriteKit on iOS and want to have a small amount of liquid simulation going on in their scene. It's not a fast implementation, because it's implemented using a combination of several built-in CoreImage filters (the only option for SpriteKit on iOS, because SpriteKit effect filters must be CIFilters, and on iOS, it's not currently possible to implement a custom  low-level CIFilter).
 
-The library is also an option on OS X for people who are using SpriteKit and do not want to implement a customer CIFilter.
+The library is also an option on OS X for people who are using SpriteKit and do not want to implement a custom low-level CIFilter.
 
 Status
 ======
