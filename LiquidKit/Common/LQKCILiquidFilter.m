@@ -73,12 +73,13 @@
 
 - (CIImage *) outputImage {
     
+#ifdef DEBUG
     NSLog(@"---------\n");
     for (NSUInteger i = 0; i < self->buffer.size; i++) {
         CGRect *rect = &self->buffer.buffer[i];
         NSLog(@"X:%f Y:%f W:%f H:%f\n", rect->origin.x, rect->origin.y, rect->size.width, rect->size.height);
     }
-    
+#endif
     
     /* ColorMap only maps non-alpha colors, so a background is needed */
     /* The color is padded to be a bit larger than the source image */

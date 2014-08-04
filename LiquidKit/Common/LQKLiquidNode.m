@@ -41,15 +41,15 @@
     /* prepare buffer */
     RasterizeBuffer *buffer = [((LQKCILiquidFilter *)[self filter]) prepareRectBufferWithSlots:[[self children] count]];
     
-    /* initialize write-head */
-    CGRect *currentRect = buffer->buffer;
-    NSUInteger count = 0;
-    
     /* return if there's nothing to process */
     if ([[self children] count] == 0) {
         buffer->size = 0;
         return;
     }
+    
+    /* initialize write-head */
+    CGRect *currentRect = buffer->buffer;
+    NSUInteger count = 0;
     
     /* wrap children with optimized linked list */
     LinkedList *children = [[LinkedList alloc] initWithArray:[self children]];
@@ -72,11 +72,11 @@
         /* if nobody is close, the group is complete */
         if (!groupNeighbor) {
             
-            currentRect++;
             SKNode *next = [children removeHead];
             
             /* initialize next group with a node if we aren't done */
             if (next) {
+                currentRect++;
                 *currentRect = [next frame];
                 count++;
             }
@@ -88,7 +88,7 @@
         *currentRect = CGRectUnion(*currentRect, [groupNeighbor frame]);
     }
     
-    /* write the number of rectangle to expect */
+    /* write the number of rectangles to expect */
     buffer->size = count;
     
 }
