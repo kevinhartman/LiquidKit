@@ -39,10 +39,15 @@
     //TODO: double-check boundary conds
     
     /* prepare buffer */
-    CGRect *currentRect = [((LQKCILiquidFilter *)[self filter]) prepareRectBufferWithSlots:[[self children] count]];
+    RasterizeBuffer *buffer = [((LQKCILiquidFilter *)[self filter]) prepareRectBufferWithSlots:[[self children] count]];
+    
+    /* initialize write-head */
+    CGRect *currentRect = buffer->buffer;
+    NSUInteger count = 0;
     
     /* return if there's nothing to process */
     if ([[self children] count] == 0) {
+        buffer->size = 0;
         return;
     }
     
@@ -51,6 +56,7 @@
 
     /* initialize the group rect with some first node */
     *currentRect = [[children removeHead] frame];
+    count++;
     
     while (![children isEmpty]) {
         SKNode *groupNeighbor = [children remove:^BOOL(id candidate, NSUInteger idx) {
@@ -65,14 +71,26 @@
         
         /* if nobody is close, the group is complete */
         if (!groupNeighbor) {
+            
             currentRect++;
-            *currentRect = [[children removeHead] frame];
+            SKNode *next = [children removeHead];
+            
+            /* initialize next group with a node if we aren't done */
+            if (next) {
+                *currentRect = [next frame];
+                count++;
+            }
+            
             continue;
         }
         
         /* the new group is is smallest rectangle containing the old group and the new neighbor */
         *currentRect = CGRectUnion(*currentRect, [groupNeighbor frame]);
     }
+    
+    /* write the number of rectangle to expect */
+    buffer->size = count;
+    
 }
 
 @end

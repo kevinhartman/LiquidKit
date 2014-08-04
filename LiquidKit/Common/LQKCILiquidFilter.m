@@ -29,8 +29,10 @@
         
         self.blurRadius = blurRadius;
         self.liquidEffect = liquidEffect;
-        self.rasterizeList = NULL;
-        self.rasterizeCount = 0;
+        
+        self->buffer.buffer = NULL;
+        self->buffer.size = 0;
+        self->bufferMaxSize = 0;
         
         self.threshFilter = [CIFilter filterWithName:@"CIColorMap" keysAndValues:@"inputGradientImage", inputGradientImage, nil];
         
@@ -54,23 +56,29 @@
     return self;
 }
 
-- (CGRect*) prepareRectBufferWithSlots:(NSUInteger)slots {
+- (RasterizeBuffer *) prepareRectBufferWithSlots:(NSUInteger)slots {
     
-    if (self.rasterizeCount < slots) {
+    if (self->bufferMaxSize < slots) {
         
-        if (self.rasterizeCount > 0) {
-            free(self.rasterizeList);
+        if (self->bufferMaxSize > 0) {
+            free(self->buffer.buffer);
         }
         
-        self.rasterizeList = malloc(slots * sizeof(CGRect));
+        self->buffer.buffer = malloc(slots * sizeof(CGRect));
+        self->bufferMaxSize = slots;
     }
     
-    self.rasterizeCount = slots;
-    
-    return self.rasterizeList;
+    return &(self->buffer);
 }
 
 - (CIImage *) outputImage {
+    
+    NSLog(@"---------\n");
+    for (NSUInteger i = 0; i < self->buffer.size; i++) {
+        CGRect *rect = &self->buffer.buffer[i];
+        NSLog(@"X:%f Y:%f W:%f H:%f\n", rect->origin.x, rect->origin.y, rect->size.width, rect->size.height);
+    }
+    
     
     /* ColorMap only maps non-alpha colors, so a background is needed */
     /* The color is padded to be a bit larger than the source image */

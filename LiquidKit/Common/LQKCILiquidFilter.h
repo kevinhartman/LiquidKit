@@ -17,8 +17,15 @@
 
 #import "LQKLiquidEffect.h"
 
+typedef struct {
+    CGRect *buffer;
+    NSUInteger size;
+} RasterizeBuffer;
+
 @interface LQKCILiquidFilter: CIFilter {
     CIImage *inputImage;
+    RasterizeBuffer buffer;
+    NSUInteger bufferMaxSize;
 }
 
 @property (retain, nonatomic) CIImage *inputImage;
@@ -30,12 +37,11 @@
 
 @property CGFloat blurRadius;
 @property NSObject<LQKLiquidEffect> *liquidEffect;
-@property CGRect *rasterizeList;
-@property NSUInteger rasterizeCount;
+
 
 - (id) initWithBlurRadius:(CGFloat)blurRadius withLiquidEffect:(NSObject<LQKLiquidEffect>*)liquidEffect;
 
-- (CGRect*) prepareRectBufferWithSlots:(NSUInteger)slots;
+- (RasterizeBuffer *) prepareRectBufferWithSlots:(NSUInteger)slots;
 
 @end
 
