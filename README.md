@@ -14,11 +14,11 @@ The library is also an option on OS X for people who are using SpriteKit and do 
 Status
 ======
 * Capable of creating 2D liquids for use in SpriteKit.
-* Currently, the liquid effect is applied to the entire area encompassed by the LiquidNode (including empty space). In SpriteKit, an EffectNode's effect is applied to the smallest rectangle that can be drawn to encompass all of it's children. This means that if you have a single liquid particle in each corner of the screen, the filter algorithm will run for the entire screen, even though there isn't much liquid to affect. This can be optimized by only running the filter on clumps of nodes that are close enough for their blurs to interact (including single nodes). I might get around to this.
+* Currently, the liquid effect is applied to the entire area encompassed by the LiquidNode (including empty space). In SpriteKit, an EffectNode's effect is applied to the smallest rectangle that can be drawn to encompass all of it's children. This means that if you have a single liquid particle in each corner of the screen, the filter algorithm will run for the entire screen, even though there isn't much liquid to affect. This can be optimized by only running the filter on clumps of nodes that are close enough for their blurs to interact (including single nodes). This is currently in progress.
 
 Known Issues
 ============
-* Designating a liquid to be white causes it to be black.
+* LQKSolidColorEffect: Designating a liquid to be white causes it to be black.
 * The more space between the LiquidNode's children, the slower the simulation will be. This could be optimized as noted in Status.
 * If any nodes (liquid particles or other nodes you want the effect applied to) fall off of the screen, your simulation will lag and SpriteKit will delete the entire LiquidNode in protest. This stems from the above issue. You should probably be deleting liquid particles after a certain amount of time (seconds), which should solve the problem for most.
 
