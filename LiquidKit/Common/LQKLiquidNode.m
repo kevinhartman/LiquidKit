@@ -31,6 +31,23 @@
     return self;
 }
 
+- (void) viewAdjust:(CGRect *) toConvert {
+    // TODO: if scale is weird, calculate for point plus w & h
+    CGPoint sceneCoord = [[self scene] convertPoint:toConvert->origin fromNode:self];
+    sceneCoord = [[self scene] convertPointToView:sceneCoord];
+    toConvert->origin = sceneCoord;
+    
+    CGPoint zero = CGPointMake(0, 0);
+    
+    /* what is the scene's origin in the view? */
+    zero = [[self scene] convertPointToView:zero];
+    
+    
+    
+    
+    
+}
+
 /*
  * Compute the sections that the liquid effect should blur
  */
@@ -72,6 +89,10 @@
         /* if nobody is close, the group is complete */
         if (!groupNeighbor) {
             
+            /* adjust the node's position to screen space */
+            [self viewAdjust:currentRect];
+            
+            /* get the next solo node */
             SKNode *next = [children removeHead];
             
             /* initialize next group with a node if we aren't done */

@@ -73,14 +73,6 @@
 
 - (CIImage *) outputImage {
     
-#ifdef DEBUG
-    NSLog(@"---------\n");
-    for (NSUInteger i = 0; i < self->buffer.size; i++) {
-        CGRect *rect = &self->buffer.buffer[i];
-        NSLog(@"X:%f Y:%f W:%f H:%f\n", rect->origin.x, rect->origin.y, rect->size.width, rect->size.height);
-    }
-#endif
-    
     /* ColorMap only maps non-alpha colors, so a background is needed */
     /* The color is padded to be a bit larger than the source image */
     /* so that the gaussian blur has data to blur at the very edges of the source image */
@@ -90,8 +82,7 @@
                                                               self.inputImage.extent.origin.y - GEN_COLOR_PADDING - self.blurRadius,
                                                               self.inputImage.extent.size.width + ((GEN_COLOR_PADDING + self.blurRadius) * 2),
                                                               self.inputImage.extent.size.height + ((GEN_COLOR_PADDING + self.blurRadius) * 2)
-                                                              )
-                             ];
+                                                              )];
     
     [self.compositeFilter setValue:croppedColor forKey:@"inputBackgroundImage"];
     
@@ -109,6 +100,28 @@
     [self.threshFilter setValue:blurredImage forKey:kCIInputImageKey];
     
     CIImage *liquidImage = [self.threshFilter valueForKey: kCIOutputImageKey];
+    
+#ifdef DEBUG
+//    NSLog(@"---------\n");
+//    for (NSUInteger i = 0; i < self->buffer.size; i++) {
+//        CGRect *rect = &self->buffer.buffer[i];
+//        NSLog(@"X:%f Y:%f W:%f H:%f\n", rect->origin.x, rect->origin.y, rect->size.width, rect->size.height);
+//    }
+    
+    CIFilter *debugComposite = [CIFilter filterWithName:@"CISourceOverCompositing"];
+    
+    for (NSUInteger i = 0; i < self->buffer.size; i++) {
+        /* Create solid debug rectangle */
+        CIFilter *debugFilter = [CIFilter filterWithName:@"CIConstantColorGenerator"];
+        [debugFilter setValue:[CIColor colorWithRed:0 green:0 blue:0 alpha:1] forKey:@"inputColor"];
+        
+        CIImage *debugColor = [debugFilter valueForKey:kCIOutputImageKey];
+        [debugComposite setValue:liquidImage forKey:@"inputBackgroundImage"];
+        [debugComposite setValue:[debugColor imageByCroppingToRect:self->buffer.buffer[i]] forKeyPath:kCIInputImageKey];
+        liquidImage = [debugComposite valueForKey: kCIOutputImageKey];
+    }
+    
+#endif
     
     return [self.liquidEffect postProcessedFrameFrom:liquidImage];
 }
