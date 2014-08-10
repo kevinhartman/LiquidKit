@@ -55,3 +55,6 @@ The following code sample shows the process of creating a liquid using LiquidKit
 
 `````
 
+Downloading
+===========
+Master is not stable. Go to the release tag and download the relevant files for whichever release you're into.
