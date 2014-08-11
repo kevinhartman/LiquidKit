@@ -11,7 +11,7 @@ This library is ~~a good option for people who are using SpriteKit on iOS~~ and 
 
 <b>Note:</b>
 If you need something fast, but you're using SpriteKit, you can now use SKShader instead of CIFilters. The introduction
-of this in the latest SpriteKit (at the time this was written), makes this library irrelevant.
+of this in the latest SpriteKit (at the time this was written), makes this library less relevant.
 
 The library is also an option on OS X for people who are using SpriteKit and do not want to implement a custom low-level CIFilter.
 
